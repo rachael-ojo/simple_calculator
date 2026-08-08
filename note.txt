@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<header>
+    Simple Calculator
+</header>
+<p>How to calculate using this wonderful calculator</p>
+<body>
+    <section class="calculator">
+        <div class="container">
+            <div class="display">
+                <input type="text" id="result" disabled>  
+            </div>
+        </div>
+    </section>
+    <section class="Number">
+        <div class="button">
+            <button>
+                <a>0</a>
+            </button>
+            <button>
+                <a>1</a>
+            </button>
+            <button>
+                <a>2</a>
+            </button>
+            <button>
+                <a>3</a>
+            </button>
+            <button>
+                <a>4</a>
+            </button>
+        </div>
+    </section>
+    
+</body>
+</html>
+
+explain to me like a newbie on how to go about writing css without code
+
+i want to make it responsive
+
+before we continue help me figure this out, i want the result box to show up before the buttons
+
+so are my to remove the div or what are you saying?
+
+check this out 
+
+how do i create the rows in html?
+
+i will like to increase the "c" button how do i do it?
+
