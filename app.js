@@ -19,6 +19,12 @@ numberButtons.forEach(function(button) {
 
 
 // Clear button
+function clearDisplay() {
+
+    result.value = "";
+
+}
+
 const clear = document.getElementById("clear");
 
 clear.addEventListener("click", function() {
@@ -65,9 +71,10 @@ function calculate() {
     }
 }
 
-
 // Keyboard functionality
 document.addEventListener("keydown", function(event) {
+
+    console.log("Key pressed:", event.key);
 
     if ("0123456789+-*/.".includes(event.key)) {
 
@@ -81,6 +88,10 @@ document.addEventListener("keydown", function(event) {
     } else if (event.key === "Backspace") {
 
         backspace();
+
+    } else if (event.key === "Escape") {
+
+        clearDisplay();
     }
 });
 
@@ -88,7 +99,6 @@ document.addEventListener("keydown", function(event) {
 function addToDisplay(value) {
 
     if (result.value === "Error") {
-
         result.value = "";
     }
 
@@ -96,7 +106,11 @@ function addToDisplay(value) {
 
     // Prevent two operators from being entered together
     if ("+-*/".includes(lastCharacter) && "+-*/".includes(value)) {
+        return;
+    }
 
+    // Prevent more than one decimal point in a number
+    if (value === "." && result.value.split(/[\+\-\*\/]/).pop().includes(".")) {
         return;
     }
 
