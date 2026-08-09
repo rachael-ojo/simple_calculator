@@ -1,57 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<header>
-    Simple Calculator
-</header>
-<p>How to calculate using this wonderful calculator</p>
-<body>
-    <section class="calculator">
-        <div class="container">
-            <div class="display">
-                <input type="text" id="result" disabled>  
-            </div>
-        </div>
-    </section>
-    <section class="Number">
-        <div class="button">
-            <button>
-                <a>0</a>
-            </button>
-            <button>
-                <a>1</a>
-            </button>
-            <button>
-                <a>2</a>
-            </button>
-            <button>
-                <a>3</a>
-            </button>
-            <button>
-                <a>4</a>
-            </button>
-        </div>
-    </section>
-    
-</body>
-</html>
+SIMPLE CALCULATOR - PROJECT NOTES
 
-explain to me like a newbie on how to go about writing css without code
+This project is a simple calculator built using HTML, CSS, and JavaScript.
 
-i want to make it responsive
+The purpose of this project was to practice JavaScript fundamentals and understand how HTML, CSS, and JavaScript work together to create an interactive web application.
 
-before we continue help me figure this out, i want the result box to show up before the buttons
+FEATURES IMPLEMENTED
 
-so are my to remove the div or what are you saying?
+- Addition
+- Subtraction
+- Multiplication
+- Division
+- Decimal calculations
+- Clear button
+- Backspace button
+- Keyboard support
+- Enter key for calculations
+- Escape key to clear the display
+- Error handling for invalid calculations
+- Prevention of multiple operators
+- Prevention of invalid decimal input
+- Responsive design for different screen sizes
 
-check this out 
+WHAT I LEARNED
 
-how do i create the rows in html?
+While building this calculator, I learned how to:
 
-i will like to increase the "c" button how do i do it?
+- Select HTML elements using JavaScript
+- Add event listeners
+- Handle button clicks
+- Handle keyboard events
+- Create and use JavaScript functions
+- Manipulate the DOM
+- Validate user input
+- Perform calculations using JavaScript
+- Make a webpage responsive
+- Debug JavaScript errors using the browser console
 
+CHALLENGES
+
+One of the challenges I encountered was making the keyboard Enter key work correctly without adding unwanted numbers to the display.
+
+I also worked on handling decimal numbers, preventing multiple decimal points, preventing multiple operators, handling division by zero, and limiting the number of digits displayed on the calculator.
+
+PROJECT COMPLETION
+
+The calculator was tested using both the calculator buttons and the computer keyboard. It was also tested at different screen sizes to make sure the layout remained usable.
+
+This project helped me improve my understanding of JavaScript and gave me more confidence in building interactive web applications.
+
+AUTHOR
+
+Rachael
