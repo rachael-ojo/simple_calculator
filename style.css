@@ -141,3 +141,17 @@ button:active {
 
 }
 
+button {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    opacity: 0.85;
+    transform: scale(1.03);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
