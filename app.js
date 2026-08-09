@@ -26,10 +26,8 @@ numberButtons.forEach(function(button) {
 
 // Clear function
 function clearDisplay() {
-
     result.value = "";
-    justCalculated = false;
-
+    result.style.fontSize = "28px";
 }
 
 
@@ -37,9 +35,8 @@ function clearDisplay() {
 const clear = document.getElementById("clear");
 
 clear.addEventListener("click", function() {
-
-    clearDisplay();
-
+    result.value = "";
+    result.style.fontSize = "28px";
 });
 
 
@@ -135,56 +132,51 @@ document.addEventListener("keydown", function(event) {
 
 });
 
-
 // Add value to display
 function addToDisplay(value) {
 
     // If display says Error, start fresh
     if (result.value === "Error") {
-
         result.value = "";
-
     }
-
 
     // After a calculation, typing a number starts a new calculation
     if (justCalculated && !"+-*/".includes(value)) {
-
         result.value = "";
-
     }
 
     justCalculated = false;
 
-
     const lastCharacter = result.value.slice(-1);
 
+    // Limit each number to 15 digits
+    const currentNumber = result.value.split(/[\+\-\*\/]/).pop();
 
-    // Prevent operators and decimal point from being the first character
-    if (result.value === "" && "+*/.".includes(value)) {
+    if (
+        "0123456789".includes(value) &&
+        currentNumber.replace(".", "").length >= 15
+    ) {
+        return;
+    }
+
+    // Prevent +, * and / from being the first character
+    if (result.value === "" && "+*/".includes(value)) {
         return;
     }
 
     // Prevent two operators together
     if ("+-*/".includes(lastCharacter) && "+-*/".includes(value)) {
-
         return;
-
     }
-
 
     // Prevent more than one decimal point in the same number
     if (
         value === "." &&
         result.value.split(/[\+\-\*\/]/).pop().includes(".")
     ) {
-
         return;
-
     }
-
 
     // Add the value
     result.value += value;
-
 }
